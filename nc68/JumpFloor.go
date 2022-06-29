@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 NC68 跳台阶
 
@@ -80,7 +78,7 @@ func process(current int, number int) int {
 	return process(number, current+1) + process(number, current+2)
 }
 
-func main() {
-	fmt.Println(jumpFloor(2))
-	fmt.Println(jumpFloor(7))
-}
+// func main() {
+// 	fmt.Println(jumpFloor(2))
+// 	fmt.Println(jumpFloor(7))
+// }

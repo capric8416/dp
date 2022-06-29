@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /**
  *
  * @param array int整型一维数组
@@ -32,6 +30,6 @@ func FindGreatestSumOfSubArray(array []int) int {
 	return maxSum
 }
 
-func main() {
-	fmt.Println(FindGreatestSumOfSubArray([]int{1, -2, 3, 10, -4, 7, 2, -5}))
-}
+// func main() {
+// 	fmt.Println(FindGreatestSumOfSubArray([]int{1, -2, 3, 10, -4, 7, 2, -5}))
+// }
