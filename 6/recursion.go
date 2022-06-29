@@ -8,7 +8,7 @@ func LongestCommonSubsequenceRecurse(text1 string, text2 string) int {
 	return process(text1, text2, len(text1)-1, len(text2)-1)
 }
 
-// text1[0...i] 与 text2[0...j] 的最长公共子串
+// text1[0...i] 与 text2[0...j] 的最长公共子序列
 func process(text1 string, text2 string, i int, j int) int {
 	// text1 和 text2 都只剩下一个字符了，如果相等返回1，否则返回0
 	if i == 0 && j == 0 {
