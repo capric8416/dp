@@ -58,6 +58,13 @@ func LongestPalindromicSubsequenceDp(s string) int {
 			if s[left] == s[right] {
 				c4 = 2 + c1
 			}
+			// 优化:
+			// 左边格子, 下方格式都大于左下
+			// 所以可以去掉 c1 分支, 变成
+			// dp[left][right] = Max(dp[left+1][right], dp[left][right-1])
+			// if s[left] == s[right] {
+			// 	dp[left][right] = Max(dp[left][right], 2+dp[left+1][right-1])
+			// }
 
 			dp[left][right] = Max(Max(c1, c2), Max(c3, c4))
 		}
