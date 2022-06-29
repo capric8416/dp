@@ -10,8 +10,8 @@ func KnapsackRecurse(weights []int, values []int, bagCapacity int) int {
 
 // 背包还剩下 leftBagCapacity 容量，针对 index 号物品，拿或者不拿，最大可以取得多少价值
 func process(index int, leftBagCapacity int, weight []int, values []int) int {
-	// 背包已经装不上东西了
-	if leftBagCapacity <= 0 || index == len(weight) {
+	// 背包已经装不上东西了 (假设物品重量可以为0)
+	if leftBagCapacity < 0 || index == len(weight) {
 		return 0
 	}
 
